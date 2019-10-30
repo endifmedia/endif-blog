@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>App</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <div id="page" class="hfeed site"> 
+      
+      <header id="masthead" class="site-header initial-reveal" role="banner">
+
+        <div class="site-logo">
+          <a href="https://blog.integer.themepatio.com/" class="custom-logo-link" rel="home" itemprop="url">
+          <img width="96" height="96" src="https://blog.integer.themepatio.com/wp-content/uploads/sites/31/2017/06/cropped-sample-avatar.jpg" class="custom-logo">
+          </a>
+        </div>
+
+        <div class="site-branding">
+          <p class="site-title">
+          <a href="https://blog.integer.themepatio.com/" rel="home">Integer</a>
+          </p>
+          <p class="site-description">Theme for telling stories</p>		
+        </div><!-- .site-branding -->
+
+        <button id="site-navigation-toggle" class="menu-toggle">
+          <i class="fa fa-bars menu-toggle-icon" aria-hidden="true"></i>
+          <span class="menu-toggle-text">
+            Menu				</span>
+        </button><!-- #site-navigation-toggle -->
+
+        <nav id="site-navigation" class="main-navigation" role="navigation">
+          <ul id="primary-menu" class="menu" aria-expanded="false">
+          <li id="menu-item-17" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-17">
+          <a href="https://blog.integer.themepatio.com">Home</a></li>
+          <li id="menu-item-18" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-2 current_page_item menu-item-18"><a href="https://blog.integer.themepatio.com/style-guide/">Style Guide</a></li>
+          <li id="menu-item-19" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-19"><a href="https://blog.integer.themepatio.com/contact/">Contact</a></li>
+          </ul>			
+        </nav><!-- #site-navigation -->
+      </header>
+    
+      <div id="main" class="site-main" role="main">
+        <div class="entry-content">
+          <%= yield %>
+        </div>
+      </div>
+
+      <footer id="colophon" class="site-footer" role="contentinfo">	
+        <nav id="site-footer-navigation" class="footer-navigation" role="navigation">
+          <div class="menu-social-container">
+            <ul id="menu-social" class="menu">
+              <li id="menu-item-8" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-8">
+                <a target="_blank" href="https://www.facebook.com/themepatio/">Facebook</a>
+              </li>
+              <li id="menu-item-9" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-9"><a target="_blank" href="https://twitter.com/themepatio">Twiter</a></li>
+              <li id="menu-item-10" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-10"><a target="_blank" href="https://dribbble.com/dmtrmrv">Dribbble</a></li>
+              <li id="menu-item-11" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-11"><a target="_blank" href="https://www.youtube.com/channel/UCR6jE9tcDY1D-9vTbgu2H0g">YouTube</a></li>
+            </ul>
+          </div>
+        </nav><!-- #site-navigation -->
+        <div class="site-info">
+          Integer theme by <a href="https://themepatio.com/">ThemePatio</a>
+        </div><!-- .site-info -->
+      </footer>
+
+    </div><!-- end id page -->
+  </body>
+</html>
