@@ -7,7 +7,15 @@
     <h1 class="entry-title"><%= @post.title %></h1>
   </header><!-- .entry-header -->
 
-  <div class="entry-meta entry-meta-before-content"><span class="entry-meta-item byline author vcard"><a class="author-avatar" href="https://blog.integer.themepatio.com/author/dmitry/"><img alt="" src="https://secure.gravatar.com/avatar/3c16756fd1ad49c6b2ca727c7a55c116?s=44&amp;d=mm&amp;r=g" srcset="https://secure.gravatar.com/avatar/3c16756fd1ad49c6b2ca727c7a55c116?s=88&amp;d=mm&amp;r=g 2x" class="avatar avatar-44 photo" height="44" width="44" originals="44" scale="2"></a><a class="url fn n" href="https://blog.integer.themepatio.com/author/dmitry/">Dmitry Mayorov</a></span><span class="entry-meta-item posted-on"><a href="https://blog.integer.themepatio.com/2017/06/13/sights-and-attractions-near-camden-lock-market/" rel="bookmark"><time class="entry-date published" datetime="2017-06-13T15:53:32+00:00">June 13, 2017</time><time class="updated" datetime="2019-09-16T13:31:27+00:00">September 16, 2019</time></a></span><span class="entry-meta-item pageviews"><i class="fa fa-eye" aria-hidden="true"></i> <span class="pageviews-placeholder" data-key="135"></span></span></div>
+  <div class="entry-meta entry-meta-before-content">
+  <span class="entry-meta-item byline author vcard">
+    <!--<a class="author-avatar" href="https://blog.integer.themepatio.com/author/dmitry/">
+    <img alt="" src="https://secure.gravatar.com/avatar/3c16756fd1ad49c6b2ca727c7a55c116?s=44&amp;d=mm&amp;r=g" srcset="https://secure.gravatar.com/avatar/3c16756fd1ad49c6b2ca727c7a55c116?s=88&amp;d=mm&amp;r=g 2x" class="avatar avatar-44 photo" height="44" width="44" originals="44" scale="2"></a>-->
+    <a class="url fn n" href=""><%= @post.user.username %></a>
+  </span>
+  <span class="entry-meta-item posted-on">
+  <a href="" rel="bookmark">
+  <time class="entry-date published"><%= time_ago_in_words(@post.created_at) %></time><time class="updated" datetime="2019-09-16T13:31:27+00:00">September 16, 2019</time></a></span><span class="entry-meta-item pageviews"><i class="fa fa-eye" aria-hidden="true"></i> <span class="pageviews-placeholder" data-key="135"></span></span></div>
  
   <div class="entry-content">
     <%= @post.content %>
