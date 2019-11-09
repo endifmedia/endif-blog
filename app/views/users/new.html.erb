@@ -3,31 +3,4 @@
 <cite>Winston Churchill</cite></p>
 </blockquote>
 
-<%= form_for(@user) do |form| %>
-  
-  <p><%= form.label :username %>
-  <%= form.text_field :username, placeholder: "Enter a username." %></p>
-
-  <p><%= form.label :email %>
-  <%= form.email_field :email, placeholder: "Enter your email." %></p>
-
-  <p><%= form.label :password %>
-  <%= form.password_field :password, placeholder: "Enter a password." %></p>
-
-  <div class="actions">
-    <%= form.submit "Join now" %>
-  </div>
-<% end %>
-
-<!--<div role="form">
-<form>
-<p><label> Your Name (required)<br>
-    <input type="text" name="your-name" value="" size="40" class="">
-    </label></p>
-<p><label> Your Email (required)<br>
-    <input type="text" name="your-name" value="" size="40" class="">
-    </label></p>
-<p><input type="submit" value="Send" class="wpcf7-form-control wpcf7-submit"><span class="ajax-loader"></span></p>
-<div class="wpcf7-response-output wpcf7-display-none"></div>
-</form>
-</div>-->
+<%= render 'form' %>
