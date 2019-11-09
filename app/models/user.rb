@@ -1,5 +1,4 @@
 class User < ApplicationRecord
-
   has_many :posts
   before_save { self.email = email.downcase }
 
@@ -8,5 +7,7 @@ class User < ApplicationRecord
 
   validates :email, presence: true, uniqueness: {case_sensitive: false},
   			length: {maximum: 150},
-  			format: {with: /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i}
+			  format: {with: /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i}
+			  
+  has_secure_password
 end
