@@ -14,8 +14,7 @@ RUN curl -sL https://deb.nodesource.com/setup_10.x | bash -
 RUN apt-get update -qq && apt-get install -y nodejs postgresql-client
 
 # Install Yarn
-RUN apt update
-RUN apt install yarn -y
+RUN apt-get install yarn -y
 
 RUN mkdir /app
 WORKDIR /app
