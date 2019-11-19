@@ -1576,6 +1576,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
  .widget.jetpack_subscription_widget {
    padding: 2.5em 2.25em 2.25em 2.25em;
    background-color: #e8e8e8;
+   margin-top: 2em;
  }
  
  .widget.jetpack_subscription_widget .widget-title {
@@ -2723,7 +2724,65 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
  .integer-subscribe-form-button .btn {
    width: 100%;
  }
- 
+
+/* custom */
+article.widget.jetpack_subscription_widget a {
+  background: none;
+  text-shadow: none;
+}
+h3.title {
+  margin: 0px;
+  font-size: 27px;
+  line-height: 32px;
+}
+h3.title a {
+  color: #666666;
+  color: var(--theme-secondary-color, #666);
+  background: none;
+  text-shadow: none;
+}
+article.single-article {
+  text-align: left;
+  background: #ffffff;
+  background: var(--theme-container-background, #fff);
+  transition: opacity 0.35s ease-in;
+  border: 1px solid #d6d6d6;
+  border: 1px solid #d6d6d6;
+  border: var(--theme-container-border, 1px solid #d6d6d6);
+  box-shadow: 1px 1px 0px #c2c2c2;
+  box-shadow: var(--theme-container-box-shadow, 1px 1px 0px #c2c2c2);
+  border-radius: 3px;
+  cursor: pointer;
+  width: 96%;
+  margin: auto;
+  position: relative;
+  padding: 30px;
+  margin-top: 15px;
+}
+article.single-article h4 {
+  color: #666666;
+    color: var(--theme-secondary-color, #666);
+    bottom: 90px;
+    left: 72px;
+    font-size: 17px;
+}
+.tags {
+  margin-top: 0px;
+  font-size: 14px;
+  display: inline-block;
+  overflow: hidden;
+}
+.tags a {
+  color: #0a0a0a;
+  color: var(--theme-container-color, #0a0a0a);
+  background: none;
+}
+.single-article h4 img {
+  border-radius: 50%;
+    position: relative;
+    top: 1em;
+}
+
  /**
   * Media Queries
   */

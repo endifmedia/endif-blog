@@ -11,6 +11,9 @@
 
   <body>
     <div id="page" class="hfeed site"> 
+    <% if flash[:notice] %>
+      <div class="notice"><%= flash[:notice] %></div>
+    <% end %>
       
       <header id="masthead" class="site-header initial-reveal" role="banner">
 
@@ -39,6 +42,16 @@
           <a href="https://blog.integer.themepatio.com">Home</a></li>
           <li id="menu-item-18" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-2 current_page_item menu-item-18"><a href="https://blog.integer.themepatio.com/style-guide/">Style Guide</a></li>
           <li id="menu-item-19" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-19"><a href="https://blog.integer.themepatio.com/contact/">Contact</a></li>
+          
+          <% if logged_in? %>
+            <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-17">
+            <%= link_to 'Log out', logout_path, method: :delete %></li>
+            <%= link_to 'Edit profile', edit_user_path(current_user) %>
+            <%= link_to 'View profile', user_path(current_user) %>
+          <% else %>
+            <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-17">
+            <%= link_to 'Log in', login_path %></li>
+          <% end %>
           </ul>			
         </nav><!-- #site-navigation -->
       </header>
