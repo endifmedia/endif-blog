@@ -1,0 +1,11 @@
+<header class="page-header">
+    <h1 class="page-header__title">Author: <span class="vcard"><%= @user.username %></span></h1>			
+    <!-- <div class="page-header__description">Dmitry builds custom WordPress solutions for his clients and runs a theme shop called ThemePatio where he creates simple and functional WordPress themes for bloggers, creatives, and business owners.</div> -->			
+</header>
+<div class="entry-meta entry-meta-before-content">
+    <span style="text-align: center;" class="author-avatar">
+        <%= gravatar_for @user, size: 120 %>
+    </span>
+</div>
+
+<%= render 'posts/post', obj: @user.posts %>

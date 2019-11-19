@@ -1,0 +1,14 @@
+<h1 style="text-align:center">Login</h1>
+
+<%= form_for(:session, url: login_path) do |form| %>
+  
+  <p><%= form.label :email %>
+  <%= form.email_field :email, placeholder: "Enter your email." %></p>
+
+  <p><%= form.label :password %>
+  <%= form.password_field :password, autocomplete: "off" %></p>
+
+  <div class="actions">
+    <%= form.submit("Login") %>
+  </div>
+<% end %>

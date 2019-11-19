@@ -1,5 +1,8 @@
 class PostsController < ApplicationController
+  
   before_action :set_post, only: [:show, :edit, :update, :destroy]
+  before_action :require_user, except: [:index, :show]
+  before_action :require_same_user, only: [:edit, :update, :destroy]
 
   # GET /posts
   # GET /posts.json
@@ -25,7 +28,7 @@ class PostsController < ApplicationController
   # POST /posts.json
   def create
     @post = Post.new(post_params)
-    @post.user = User.first
+    @post.user = current_user
 
     respond_to do |format|
       if @post.save
@@ -72,4 +75,12 @@ class PostsController < ApplicationController
     def post_params
       params.require(:post).permit(:title, :content)
     end
+
+    def require_same_user
+      if current_user != @post.user
+        flash[:danger] = 'You can only edit or delete you own posts.'
+        redirect_to root_path
+      end
+    end
 end
+ 
