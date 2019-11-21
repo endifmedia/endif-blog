@@ -1,15 +1,19 @@
-<%= form_for(@user) do |form| %>
-  
-  <p><%= form.label :username %>
-  <%= form.text_field :username, placeholder: "Enter a username." %></p>
+<div id="main" class="site-main" role="main">
+  <div class="entry-content">
+  <%= form_for(@user) do |form| %>
+    
+    <p><%= form.label :username %>
+    <%= form.text_field :username, placeholder: "Enter a username." %></p>
 
-  <p><%= form.label :email %>
-  <%= form.email_field :email, placeholder: "Enter your email." %></p>
+    <p><%= form.label :email %>
+    <%= form.email_field :email, placeholder: "Enter your email." %></p>
 
-  <p><%= form.label :password %>
-  <%= form.password_field :password, placeholder: "Enter a password." %></p>
+    <p><%= form.label :password %>
+    <%= form.password_field :password, placeholder: "Enter a password." %></p>
 
-  <div class="actions">
-    <%= form.submit(@user.new_record? ? "Signup" : "Update") %>
+    <div class="actions">
+      <%= form.submit(@user.new_record? ? "Signup" : "Update") %>
+    </div>
+  <% end %>
   </div>
-<% end %>
+</div>

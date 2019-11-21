@@ -1,8 +1,6 @@
 
+<div id="main" class="site-main" role="main">
 <article id="post-<%= @post.id %>" class="post-<%= @post.id %> page type-page status-publish hentry">
-  
-  <p id="notice"><%= notice %></p>  
-
   <header class="entry-header">
     <h1 class="entry-title"><%= @post.title %></h1>
   </header><!-- .entry-header -->
@@ -21,11 +19,29 @@
       </a>
     </span>
   </div>
+
+  <% if logged_in? && current_user == @post.user %>
+    <div class="entry-meta entry-meta-before-content">
+    <span class="entry-meta-item byline author vcard">
+      <%= link_to 'Edit', edit_post_path(@post) %> |
+      <%= link_to 'Back', posts_path %>
+      </span>
+    </div>
+  <% end %>
+
+  
+
+  <% if @post.featured_image.attached? %>
+    <div class="entry-thumbnail">
+      <img src="<%= url_for(@post.featured_image) %>" />
+    </div>
+  <% end %>
  
   <div class="entry-content">
+    
     <%= @post.content %>
-    <%= link_to 'Edit', edit_post_path(@post) %> |
-    <%= link_to 'Back', posts_path %>
+
   </div>
 
 </article>
+</div>

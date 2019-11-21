@@ -2726,6 +2726,26 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
  }
 
 /* custom */
+ul.highlight {
+  background-color: #fff090;
+  color: #222;
+  margin: 0;
+  padding: 12px 20px 3px;
+  list-style: none;
+}
+header .site-title a {
+  background: none;
+  font-family: 'Zeyada', cursive;
+  font-size: 2em;
+  font-weight: 200;
+  color: #b8b8b8;
+  font-size: 2.7em;
+}
+.site-title a:hover, .site-title a:focus {
+  color: inherit !important;
+  background: none !important;
+  font-weight: 600;
+}
 article.widget.jetpack_subscription_widget a {
   background: none;
   text-shadow: none;
