@@ -35,7 +35,7 @@
       </div>
 
       <div class="blogroll-item__content">
-        <%= truncate(strip_tags(post.rich_text_content.to_s), length: 40) %>
+        <%= truncate(strip_tags(post.rich_text_content.to_s), length: 340) %>
         <p><%= link_to "Continue reading " , post_path(post) %></p>
       </div><!-- .blogroll-item__content -->
       
