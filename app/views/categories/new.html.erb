@@ -1,0 +1,13 @@
+<div id="main" class="site-main" role="main">
+  <div class="entry-content">
+  <%= form_for(@category) do |form| %>
+    
+    <p><%= form.label :category %></p>
+    <p><%= form.text_field :name, placeholder: "Category name." %></p>
+
+    <div class="actions">
+      <%= form.submit %>
+    </div>
+  <% end %>
+  </div>
+</div>
