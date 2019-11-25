@@ -2,9 +2,13 @@
 <div id="main" class="site-main" role="main">
   <div class="entry-content">
 
-    <header class="page-header">
-      <h1>Posts <%= link_to 'Add New', new_post_path %></h1>
+    <header class="page-header" style="text-align:center">
+      <h1>Posts</h1>
     </header>
+
+    <div style="font-size: 12px; text-align:center">
+      <%= link_to 'Add New', new_post_path %>
+    </div>
 
     <% if (obj) %> 
     <% obj.each do |post| %>
@@ -16,11 +20,15 @@
           </time>
         </h4>
         
-        <div class="tags"><a href="/t/react"><span class="tag">#react</span></a>
-          <a href="/t/javascript"><span class="tag">#javascript</span></a>
-          <a href="/t/beginners"><span class="tag">#beginners</span></a>
-          <a href="/t/opensource"><span class="tag">#opensource</span></a>
+        <% post.categories.each do |category| %>
+        <div class="tags">
+          <%#= link_to category_path(category) do %>
+            <span class="tag"></span>#<%= category.name %>
+          <%# end %>
         </div>
+        <% end %>
+
+        <span class="tag">
         
         <div class="">
         <%= link_to 'View', post %> 

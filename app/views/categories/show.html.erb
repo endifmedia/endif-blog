@@ -1,0 +1,5 @@
+<header class="page-header" style="text-align: center;">
+    <h1 class="page-header__title">Category: <span class="vcard"><%= @category.name %></span></h1>			
+</header>
+
+<%= render 'posts/post', obj: @category.posts %>
