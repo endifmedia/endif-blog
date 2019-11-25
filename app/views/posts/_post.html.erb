@@ -2,13 +2,9 @@
   <% if (obj) %> 
     <% obj.each do |post| %>
       <article class="blogroll-item post-135 post type-post status-publish format-standard has-post-thumbnail hentry category-explorations">
-      
-      <!--<a class="blogroll-item__thumbnail" href="<%= link_to post.title , post_path(post) %>">
-        <img src="https://picsum.photos/543/343" class="attachment-integer-blog-thumbnail size-integer-blog-thumbnail wp-post-image" alt="">
-      </a>-->
 
       <% if post.featured_image.attached? %>
-      <%= link_to image_tag(url_for(post.featured_image), class: 'attachment-integer-blog-thumbnail size-integer-blog-thumbnail wp-post-image'), post_path(post), class: 'blogroll-item__thumbnail' %>
+        <%= link_to image_tag(url_for(post.featured_image), class: 'attachment-integer-blog-thumbnail size-integer-blog-thumbnail wp-post-image'), post_path(post), class: 'blogroll-item__thumbnail' %>
       <% end %>
       
       <header class="blogroll-item__header">
@@ -17,21 +13,12 @@
         </h2>
       </header><!-- .blogroll-item__header -->
 
-      
-
       <div class="entry-meta entry-meta-index">
-        <!-- <span class="entry-meta-item cat-links">
-          <a href="https://blog.integer.themepatio.com/category/explorations/" rel="tag">Explorations</a>
-        </span> -->
         <span class="entry-meta-item posted-on">
           <a href="" rel="bookmark">
           <time class="entry-date published"><%= time_ago_in_words(post.created_at) %> ago</time>
           </a>
         </span>
-        <!--<span class="entry-meta-item pageviews">
-          <i class="fa fa-eye" aria-hidden="true"></i> 
-          <span class="pageviews-placeholder" data-key="135">2492</span>
-        </span>-->
       </div>
 
       <div class="blogroll-item__content">
@@ -39,13 +26,6 @@
         <p><%= link_to "Continue reading " , post_path(post) %></p>
       </div><!-- .blogroll-item__content -->
       
-    
-      
-      <!--<div class="tags"><a href="/t/react"><span class="tag">#react</span></a>
-        <a href="/t/javascript"><span class="tag">#javascript</span></a>
-        <a href="/t/beginners"><span class="tag">#beginners</span></a>
-        <a href="/t/opensource"><span class="tag">#opensource</span></a>
-      </div> -->
       </article>
     <% end %>
   <% end %>

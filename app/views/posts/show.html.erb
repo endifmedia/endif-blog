@@ -1,6 +1,17 @@
 
 <div id="main" class="site-main" role="main">
 <article id="post-<%= @post.id %>" class="post-<%= @post.id %> page type-page status-publish hentry">
+  
+  <% if @post.categories.any? %>
+    <div class="entry-meta entry-meta-before-title">
+      <span class="entry-meta-item cat-links">
+        <% @post.categories.each do |category| %>
+          <%= link_to "##{category.name}", category_path(category) %> 
+        <% end %>
+      </span>
+    </div>
+  <% end %>
+  
   <header class="entry-header">
     <h1 class="entry-title"><%= @post.title %></h1>
   </header><!-- .entry-header -->

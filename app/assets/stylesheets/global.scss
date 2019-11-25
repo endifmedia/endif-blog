@@ -428,13 +428,13 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
  
  pre {
    overflow: auto;
-   padding: 1.5em;
+   padding: 1.5em !important;
    max-width: 100%;
-   background-color: #1e1e1e;
+   background-color: #1e1e1e !important;
    color: #f0f0f0;
    word-wrap: initial;
    font-weight: bold;
-   font-family: Courier, 'Andale Mono', 'DejaVu Sans Mono', monospace;
+   font-family: Courier, 'Andale Mono', 'DejaVu Sans Mono', monospace !important;
  }
  
  code,
@@ -2726,6 +2726,15 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
  }
 
 /* custom */
+label.checkbox-inline {
+  margin-right: 1em;
+}
+input.checkbox {
+  margin-right: .2em;
+}
+li:hover ul {
+  display: block;
+}
 .center {
   text-align: center;
 }
@@ -3181,6 +3190,13 @@ article.single-article h4 {
    .site-main.error404 {
      padding-top: 4rem;
    }
+ }
+
+ @media (max-width: 845px) {
+  nav#site-navigation.toggled ul.sub-menu {
+    display: block;
+    margin: 0;
+  }
  }
  
  @media (min-width: 1024px) {
