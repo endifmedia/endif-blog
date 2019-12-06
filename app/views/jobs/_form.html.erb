@@ -1,0 +1,44 @@
+<%= form_for(@job) do |form| %>
+  <p>
+    <%= form.label :company %>
+    <%= form.text_field :company %>
+  </p>
+
+  <p>
+    <%= form.label "Featured Image" %>
+    <%= form.file_field :featured_image %>
+  </p>
+  
+  <% if @job.featured_image.attached? %>
+    <p><%= image_tag(@job.featured_image) %> <br></p>
+  <% end %>
+  
+  <p>
+    <%= form.label :content %>
+    <%= form.rich_text_area :content %>
+  </p>
+  
+  <p>
+    <%= form.label :marketing_blurb %>
+    <%= form.text_field :marketing_blurb %>
+  </p>
+
+  <p>
+    <%= form.label :staff %>
+    <%= form.text_field :staff %>
+  </p>
+  
+  <p>
+    <%= form.label :remoteness %>
+    <%= form.text_field :remoteness %>
+  </p>
+
+  <p>
+    <%= form.label :website %>
+    <%= form.text_field :website %>
+  </p>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

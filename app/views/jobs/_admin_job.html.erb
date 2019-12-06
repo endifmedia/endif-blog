@@ -1,0 +1,30 @@
+
+<div id="main" class="site-main" role="main">
+  <div class="entry-content">
+
+    <header class="page-header" style="text-align:center">
+      <h1>Remote Jobs</h1>
+    </header>
+
+    <div style="font-size: 12px; text-align:center">
+      <%= link_to 'Add New', new_job_path %>
+    </div>
+
+    <% if (obj) %> 
+    <% obj.each do |job| %>
+    <article class="single-article">
+        <h3 class="title"><%= link_to job.company , edit_job_path(job) %></h3>
+
+        <span class="tag">
+        
+        <div class="">
+        <%= link_to 'View', job %> 
+        <% if logged_in? && current_user == job.user %>        
+          <%= link_to 'Delete', job, method: :delete, data: { confirm: 'Are you sure?' } %>
+        <% end %>
+        </div>
+    </article>
+    <% end %>
+    <% end %>
+  </div>
+</div>

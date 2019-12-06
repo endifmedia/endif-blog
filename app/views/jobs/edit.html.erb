@@ -1,0 +1,10 @@
+<article id="post-<%= @job.id %>" class="post-<%= @job.id %> page type-page status-publish hentry">
+  <header class="entry-header" style="text-align: center;">
+    <h1 class="entry-title">Editing Job</h1>
+    <%= link_to 'Show', @job %> | <%= link_to 'Back', jobs_path %>
+  </header>
+
+  <div class="entry-content">
+    <%= render 'form', post: @job %>
+  </div>
+</article>

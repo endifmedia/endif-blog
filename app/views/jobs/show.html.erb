@@ -1,0 +1,40 @@
+<div class="entry-content">
+  <div class="ui center aligned icon header">
+    <img class="circular ui center" src="/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--dbeabbc738a63ddd3c7146dd60a4bcf167f9a074/etsy-logo.png" style="
+        max-width: 15%;
+        display: inline-block;
+        /* width: 80px; */
+        /* height: auto; */
+        font-size: .85714286rem;
+        position: relative;
+        display: inline-block;
+        vertical-align: middle;
+        /* max-width: 100%; */
+        background-color: transparent;
+    ">
+  </div>
+
+  <h2 class="ui center aligned icon header"><%= @job.company%></h2>
+  
+  <div class="ui center horizontal list " style=" display: inline block !important;margin: auto;display: block;">
+    <div class="item">
+      <div class="content">
+        <div class="ui sub header mini button"><%= @job.website %></div>
+      </div>
+    </div>
+    <div class="item">
+      <div class="content">
+        <div class="ui sub header mini button"><%= @job.staff %> staff</div>
+      </div>
+    </div>
+    <div class="item">
+      <div class="content">
+        <div class="ui sub header mini button"><%= @job.remoteness %></div>
+      </div>
+    </div>
+  </div>
+
+  <p class="ui center aligned"><%= @job.marketing_blurb %></p>
+  <%= @job.content %>
+
+</div>

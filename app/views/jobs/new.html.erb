@@ -1,0 +1,10 @@
+<article id="post">
+  <header class="entry-header"  style="text-align:center">
+    <h1>New Remote Job</h1>
+    <%= link_to 'Back', jobs_path %>
+  </header>
+
+  <div class="entry-content">
+    <%= render 'form', post: @job %>
+  </div>
+</article>

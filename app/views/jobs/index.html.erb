@@ -1,0 +1,5 @@
+<% if logged_in? %>
+ <%= render 'admin_job', obj: @jobs %>
+<% else %>
+ <%= render 'job', obj: @jobs %>
+<% end %>
