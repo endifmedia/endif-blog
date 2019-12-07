@@ -1,17 +1,6 @@
 <div class="entry-content">
   <div class="ui center aligned icon header">
-    <img class="circular ui center" src="/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--dbeabbc738a63ddd3c7146dd60a4bcf167f9a074/etsy-logo.png" style="
-        max-width: 15%;
-        display: inline-block;
-        /* width: 80px; */
-        /* height: auto; */
-        font-size: .85714286rem;
-        position: relative;
-        display: inline-block;
-        vertical-align: middle;
-        /* max-width: 100%; */
-        background-color: transparent;
-    ">
+    <%= image_tag(url_for(@job.featured_image), class: 'circular ui center small', size: "120") %>
   </div>
 
   <h2 class="ui center aligned icon header"><%= @job.company%></h2>
