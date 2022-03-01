@@ -26,7 +26,7 @@ gem 'bcrypt', '~> 3.1.7'
 gem "actiontext", require: "action_text"
 
 # Use Active Storage variant
-gem 'image_processing', '~> 1.2'
+gem 'image_processing', '~> 1.12'
 
 # Use GCP storage
 gem 'google-cloud-storage', '~> 1.24'
